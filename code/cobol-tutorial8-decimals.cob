@@ -9,9 +9,9 @@
        01 TaxRate PIC V999 VALUE .075.
        01 Fullprice PIC 9(4)V99.
        PROCEDURE DIVISION.
-       DISPLAY "Enter the price: " WITH NO ADVANCING
-       ACCEPT Price
-       COMPUTE FullPrice ROUNDED = Price + (Price * TaxRate)
-       DISPLAY "Tax + Price: " FullPrice
-       STOP RUN.
+           DISPLAY "Enter the price: " WITH NO ADVANCING
+           ACCEPT Price
+           COMPUTE FullPrice ROUNDED = Price + (Price * TaxRate)
+           DISPLAY "Tax + Price: " FullPrice
+           STOP RUN.
        

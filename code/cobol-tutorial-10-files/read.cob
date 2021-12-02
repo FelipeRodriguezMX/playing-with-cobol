@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. COBOL-TUTORIAL10-FILES.
+       PROGRAM-ID. READDATA.
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
@@ -20,18 +20,15 @@
            02 WSCustName.
                03 WSFirstName PIC X(31).
                03 WSLastName PIC X(30).
+       01 WSEOF PIC A(1).
        PROCEDURE DIVISION.
-       OPEN OUTPUT CustomerFile.
-           MOVE 00001 TO IDNum.
-           MOVE "Felipe de Jesus" TO FirstName.
-           MOVE "Rodriguez Ontiveros" TO LastName.
-           WRITE CustomerData
-           END-WRITE.
-           MOVE 00001 TO IDNum.
-           MOVE "Felipe de Jesus2 1111111111111" TO FirstName.
-           MOVE "Rodriguez Ontiveros" TO LastName.
-           WRITE CustomerData
-           END-WRITE.
-       CLOSE CustomerFile.
-       STOP RUN.
+           OPEN INPUT CustomerFile.
+               PERFORM UNTIL WSEOF IS EQUAL TO 'Y'
+                   READ CustomerFile INTO WSCUSTOMER
+                       AT END MOVE 'Y' TO WSEOF
+                       NOT AT END DISPLAY WSCUSTOMER
+                   END-READ
+               END-PERFORM
+           CLOSE CustomerFile.
+           STOP RUN.
        

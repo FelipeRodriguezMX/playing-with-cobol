@@ -21,60 +21,60 @@
            88 LessThan5 VALUE "1" THRU "4".
            88 ANumber VALUE  "0" THRU "9".
        PROCEDURE DIVISION.
-       DISPLAY "Enter age : " WITH NO ADVANCING
-       ACCEPT Age
-       IF Age > 18 THEN 
-           DISPLAY "You can vote"
-       ELSE 
-           DISPLAY "You can not vote"
-       END-IF 
-       IF Age LESS THAN 5 THEN 
-           DISPLAY "STAY HOME"
-       END-IF
-       IF Age IS EQUAL TO 5 THEN 
-           DISPLAY "Go to kindergarden"
-       END-IF
-       IF Age IS GREATER THAN 5 AND LESS THAN 18 THEN 
-           SUBTRACT Age FROM 5 GIVING Grade
-           DISPLAY "Go to grade " Grade  
-       END-IF
-       IF Age GREATER THAN OR EQUAL TO 18
-           DISPLAY "Go to college"
-       END-IF
-       DISPLAY "Enter a letter from A TO F: "
-       ACCEPT Score
-       MOVE FUNCTION UPPER-CASE(Score) TO Score
-       IF Score IS PassingScore THEN 
-           DISPLAY "You passed"
-       ELSE 
-           DISPLAY "You failed"
-       END-IF
-       *>    EVALUATE Score
-       *>        WHEN Score IS NOT AcceptedScores
-       *>           DISPLAY "Score not valid"
-       *>        WHEN Score IS PassingScore
-       *>            DISPLAY "You passed"
-       *>        WHEN OTHER 
-       *>            DISPLAY "You failed"
-       *>    END-EVALUATE.
-       IF Age > 18 THEN
-           SET CanVote TO TRUE
-       ELSE
-           SET CantVote TO TRUE
-       END-IF
-       DISPLAY "Vote: " CanVoteFlag
-
-       DISPLAY "Enter single number or X to exit: "
-       ACCEPT TestNumber
-       PERFORM UNTIL NOT ANumber
-           EVALUATE TRUE
-               WHEN IsPrime DISPLAY "IsPrime"
-               WHEN IsOdd DISPLAY "IsOdd"
-               WHEN IsEven DISPLAY "IsEven"
-               WHEN LessThan5 DISPLAY "LessThan5"                   
-               WHEN OTHER DISPLAY "Default acction"                   
-           END-EVALUATE
-           ACCEPT TestNumber
-       END-PERFORM      
-       STOP RUN.
-    
+            DISPLAY "Enter age : " WITH NO ADVANCING
+            ACCEPT Age
+            IF Age > 18 THEN 
+                DISPLAY "You can vote"
+            ELSE 
+                DISPLAY "You can not vote"
+            END-IF 
+            IF Age LESS THAN 5 THEN 
+                DISPLAY "STAY HOME"
+            END-IF
+            IF Age IS EQUAL TO 5 THEN 
+                DISPLAY "Go to kindergarden"
+            END-IF
+            IF Age IS GREATER THAN 5 AND LESS THAN 18 THEN 
+                SUBTRACT Age FROM 5 GIVING Grade
+                DISPLAY "Go to grade " Grade  
+            END-IF
+            IF Age GREATER THAN OR EQUAL TO 18
+                DISPLAY "Go to college"
+            END-IF
+            DISPLAY "Enter a letter from A TO F: "
+            ACCEPT Score
+            MOVE FUNCTION UPPER-CASE(Score) TO Score
+            IF Score IS PassingScore THEN 
+                DISPLAY "You passed"
+            ELSE 
+                DISPLAY "You failed"
+            END-IF
+            *>    EVALUATE Score
+            *>        WHEN Score IS NOT AcceptedScores
+            *>           DISPLAY "Score not valid"
+            *>        WHEN Score IS PassingScore
+            *>            DISPLAY "You passed"
+            *>        WHEN OTHER 
+            *>            DISPLAY "You failed"
+            *>    END-EVALUATE.
+            IF Age > 18 THEN
+                SET CanVote TO TRUE
+            ELSE
+                SET CantVote TO TRUE
+            END-IF
+            DISPLAY "Vote: " CanVoteFlag
+     
+            DISPLAY "Enter single number or X to exit: "
+            ACCEPT TestNumber
+            PERFORM UNTIL NOT ANumber
+                EVALUATE TRUE
+                    WHEN IsPrime DISPLAY "IsPrime"
+                    WHEN IsOdd DISPLAY "IsOdd"
+                    WHEN IsEven DISPLAY "IsEven"
+                    WHEN LessThan5 DISPLAY "LessThan5"                   
+                    WHEN OTHER DISPLAY "Default acction"                   
+                END-EVALUATE
+                ACCEPT TestNumber
+            END-PERFORM      
+            STOP RUN.
+     

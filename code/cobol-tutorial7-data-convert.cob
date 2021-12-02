@@ -12,12 +12,12 @@
        01 BDay PIC 9(8) VALUE 12211974.
        01 ADate PIC 99/99/9999.
        PROCEDURE DIVISION.
-       MOVE StartNum TO NoZero
-       DISPLAY NoZero
-       MOVE StartNum TO NoZplusC
-       DISPLAY NoZplusC
-       MOVE StartNum TO Dollar
-       DISPLAY Dollar
-       MOVE BDay TO ADate
-       DISPLAY ADate
-       STOP RUN.
+           MOVE StartNum TO NoZero
+           DISPLAY NoZero
+           MOVE StartNum TO NoZplusC
+           DISPLAY NoZplusC
+           MOVE StartNum TO Dollar
+           DISPLAY Dollar
+           MOVE BDay TO ADate
+           DISPLAY ADate
+           STOP RUN.

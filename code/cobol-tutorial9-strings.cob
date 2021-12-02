@@ -19,38 +19,38 @@
        01 SStr3 PIC X(3).
        01 SStr4 PIC X(3).
        PROCEDURE DIVISION.
-       INSPECT SampStr TALLYING Numchars FOR CHARACTERS.
-       DISPLAY "Number of charracters: "Numchars.
-       INSPECT SampStr TALLYING NumEs FOR ALL 'e'.
-       DISPLAY "Number of e's: "NumEs.
-       DISPLAY FUNCTION UPPER-CASE(SampStr)
-       DISPLAY FUNCTION LOWER-CASE(SampStr)
-
-       STRING FName DELIMITED BY SIZE
-       SPACE 
-       LName DELIMITED BY SIZE
-       INTO FLName.
-       DISPLAY FLName.
-       
-       STRING FLName DELIMITED BY SPACES
-       SPACE 
-       MName DELIMITED BY SIZE
-       SPACE 
-       LName DELIMITED BY SIZE
-       INTO FMLName
-       ON OVERFLOW DISPLAY "Overflowed".
-       DISPLAY FMLName.
-       
-       STRING SStr1 DELIMITED BY SIZE
-       SPACE
-       SStr2 DELIMITED BY "#"
-       INTO Dest
-       WITH POINTER Ptr
-       ON OVERFLOW DISPLAY "Overflowed".
-       DISPLAY Dest.
-       
-       UNSTRING SStr1 DELIMITED BY SPACE
-       INTO SStr3, SStr4
-       END-UNSTRING.
-       DISPLAY SStr4.
-       STOP RUN.
+           INSPECT SampStr TALLYING Numchars FOR CHARACTERS.
+           DISPLAY "Number of charracters: "Numchars.
+           INSPECT SampStr TALLYING NumEs FOR ALL 'e'.
+           DISPLAY "Number of e's: "NumEs.
+           DISPLAY FUNCTION UPPER-CASE(SampStr)
+           DISPLAY FUNCTION LOWER-CASE(SampStr)
+    
+           STRING FName DELIMITED BY SIZE
+           SPACE 
+           LName DELIMITED BY SIZE
+           INTO FLName.
+           DISPLAY FLName.
+           
+           STRING FLName DELIMITED BY SPACES
+           SPACE 
+           MName DELIMITED BY SIZE
+           SPACE 
+           LName DELIMITED BY SIZE
+           INTO FMLName
+           ON OVERFLOW DISPLAY "Overflowed".
+           DISPLAY FMLName.
+           
+           STRING SStr1 DELIMITED BY SIZE
+           SPACE
+           SStr2 DELIMITED BY "#"
+           INTO Dest
+           WITH POINTER Ptr
+           ON OVERFLOW DISPLAY "Overflowed".
+           DISPLAY Dest.
+           
+           UNSTRING SStr1 DELIMITED BY SPACE
+           INTO SStr3, SStr4
+           END-UNSTRING.
+           DISPLAY SStr4.
+           STOP RUN.

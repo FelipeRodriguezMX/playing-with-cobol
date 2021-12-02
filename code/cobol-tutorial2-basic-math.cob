@@ -21,58 +21,59 @@
        01 Ans PIC S99V99 VALUE 0.
        01 Rem PIC 9V99.
        PROCEDURE DIVISION.
-       MOVE "Mover cosas" TO SampleData
-       MOVE "123" TO SampleData
-       MOVE 123 TO SampleData
-       DISPLAY SampleData
-       DISPLAY PayCheck
-       MOVE "123Bob Smith           02012001" TO
-       Customer
-       DISPLAY CustName
-       DISPLAY MOB "/" DOB "/" YOB
-       MOVE ZERO TO SampleData
-       DISPLAY SampleData
-       MOVE SPACE TO SampleData
-       DISPLAY SampleData
-       MOVE HIGH-VALUE TO SampleData
-       DISPLAY SampleData
-       MOVE LOW-VALUE TO SampleData
-       DISPLAY SampleData
-       MOVE QUOTE TO SampleData
-       DISPLAY SampleData
-       MOVE ALL "2" TO SampleData
-       DISPLAY SampleData
-
-       ADD Num1 TO Num2 GIVING Ans
-       DISPLAY Ans
-       SUBTRACT Num1 FROM Num2 GIVING Ans
-       DISPLAY Ans
-       MULTIPLY Num1 BY Num2 GIVING Ans
-       DISPLAY Ans
-       DIVIDE Num1 INTO Num2 GIVING Ans
-       DISPLAY Ans
-       DIVIDE Num1 INTO Num2 GIVING Ans REMAINDER Rem
-       DISPLAY "Rem " Rem
-
-       ADD Num1, Num2 TO Num3 GIVING Ans
-       DISPLAY Ans
-       ADD Num1, Num2, Num3 GIVING Ans
-       DISPLAY Ans
-       COMPUTE Ans = num1 + Num2
-       DISPLAY Ans
-       COMPUTE Ans = num1 - Num2
-       DISPLAY Ans
-       COMPUTE Ans = num1 * Num2
-       DISPLAY Ans
-       COMPUTE Ans = num1 / Num2
-       DISPLAY Ans
-       COMPUTE Ans = num1 ** 3
-       DISPLAY Ans
-       COMPUTE Ans = 3 + 5 * 5
-       DISPLAY Ans
-       COMPUTE Ans = (3 + 5) * 5
-       DISPLAY Ans
-       COMPUTE Ans ROUNDED = 3 + 5 * 5
-       DISPLAY Ans
-
-       STOP RUN.
+           MOVE "Mover cosas" TO SampleData
+           MOVE "123" TO SampleData
+           MOVE 123 TO SampleData
+           DISPLAY SampleData
+           DISPLAY PayCheck
+           MOVE "123Bob Smith           02012001" TO
+           Customer
+           DISPLAY CustName
+           DISPLAY MOB "/" DOB "/" YOB
+           MOVE ZERO TO SampleData
+           DISPLAY SampleData
+           MOVE SPACE TO SampleData
+           DISPLAY SampleData
+           MOVE HIGH-VALUE TO SampleData
+           DISPLAY SampleData
+           MOVE LOW-VALUE TO SampleData
+           DISPLAY SampleData
+           MOVE QUOTE TO SampleData
+           DISPLAY SampleData
+           MOVE ALL "2" TO SampleData
+           DISPLAY SampleData
+    
+           ADD Num1 TO Num2 GIVING Ans
+           DISPLAY Ans
+           SUBTRACT Num1 FROM Num2 GIVING Ans
+           DISPLAY Ans
+           MULTIPLY Num1 BY Num2 GIVING Ans
+           DISPLAY Ans
+           DIVIDE Num1 INTO Num2 GIVING Ans
+           DISPLAY Ans
+           DIVIDE Num1 INTO Num2 GIVING Ans REMAINDER Rem
+           DISPLAY "Rem " Rem
+    
+           ADD Num1, Num2 TO Num3 GIVING Ans
+           DISPLAY Ans
+           ADD Num1, Num2, Num3 GIVING Ans
+           DISPLAY Ans
+           COMPUTE Ans = num1 + Num2
+           DISPLAY Ans
+           COMPUTE Ans = num1 - Num2
+           DISPLAY Ans
+           COMPUTE Ans = num1 * Num2
+           DISPLAY Ans
+           COMPUTE Ans = num1 / Num2
+           DISPLAY Ans
+           COMPUTE Ans = num1 ** 3
+           DISPLAY Ans
+           COMPUTE Ans = 3 + 5 * 5
+           DISPLAY Ans
+           COMPUTE Ans = (3 + 5) * 5
+           DISPLAY Ans
+           COMPUTE Ans ROUNDED = 3 + 5 * 5
+           DISPLAY Ans
+    
+           STOP RUN.
+    
